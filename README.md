@@ -32,7 +32,6 @@ define command {
       command_name notify-service-by-slack
       command_line /usr/local/nagios/libexec/slack_service_notify.sh "$NOTIFICATIONTYPE$" "$HOSTNAME$" $HOSTADDRESS$ "$SERVICEDESC$" "$SERVICESTATE$" "$SERVICEOUTPUT$" "$LONGDATETIME$" "$SERVICEACKCOMMENT$" "$SERVICEACKAUTHOR$" "$SERVICEINFOURL$"
 }
-
 define command {
       command_name notify-host-by-slack
       command_line /usr/local/nagios/libexec/slack_host_notify.sh "$NOTIFICATIONTYPE$" "$HOSTNAME$" $HOSTADDRESS$ "$HOSTSTATE$" "$HOSTOUTPUT$" "$LONGDATETIME$" "$HOSTACKCOMMENT$" "$HOSTACKAUTHOR$" "$HOSTINFOURL$"
