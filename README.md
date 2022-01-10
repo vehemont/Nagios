@@ -17,7 +17,7 @@ EXAMPLE:
 
 ### Setup:
 
-1. (https://api.slack.com/messaging/webhooks)[Create a Slack webhook] in a channel you want the alerts to go to. You will get a URL to copy.
+1. (Create a Slack webhook)[https://api.slack.com/messaging/webhooks] in a channel you want the alerts to go to. You will get a URL to copy.
 2. Copy the two shell scripts into your script library. In this example I put them in `/nagios/libexec/`.
 3. Make the two shell scripts executable with `chmod +x slack_service_notify.sh` and `chmod +x slack_host_notify.sh`
 4. Open each file in your preferred text editor and edit the `SLACK_URL` variable to your Slack webhook URL.
