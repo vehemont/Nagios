@@ -23,7 +23,7 @@ EXAMPLE:
 ### Setup:
 
 1. [Create a Slack webhook](https://api.slack.com/messaging/webhooks) in a channel you want the alerts to go to. You will get a URL with your new webhook.
-2. Copy the two shell scripts onto your Nagios instance. In this example I put them in `/nagios/libexec/`.
+2. Copy the two shell scripts (`slack_service_notify.sh` and `slack_host_notify.sh`) onto your Nagios instance. In this example I put them in `/nagios/libexec/`.
 3. Make the two shell scripts executable with `chmod +x slack_service_notify.sh` and `chmod +x slack_host_notify.sh`
 4. Open each file in your preferred text editor and edit the `SLACK_URL` variable to your Slack webhook URL you received in step 1.
 5. Make a two new Nagios commands in a .cfg file. I used `/nagios/etc/objects/commands.cfg`. Make sure you update the `command_line` with the correct location of the script if you did not place the script in `/usr/local/nagios/libexec/`.
