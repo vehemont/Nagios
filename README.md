@@ -17,8 +17,12 @@ EXAMPLE:
 
 ## Slack notifications
 
-`slack_host_notify.sh` - Sends an embeded message to a Slack channel for Nagios host alerts. Works with acknowledgement alerts to provide the user who acknowledged the alert and the reason.  
-`slack_service_notify.sh` - This is the same as the host notify but just for services within Nagios.
+`slack_host_notify.sh` - Sends an embeded message to a Slack channel for Nagios host alerts. Works with acknowledgement alerts to provide the user who acknowledged the alert and the reason. Embed color changes based on alert status: recovery (green), problem(orange), critical (red).  
+
+`slack_service_notify.sh` - This is the same as the host notify but just for services within Nagios.  
+
+![service_problem](/images/slack_service_problem.png)
+![acknowledgement](/images/slack_acknowledgement.png)  
 
 ### Setup:
 
@@ -53,3 +57,4 @@ define contact {
 7. Add the new contact to your contact groups or directly to host or service objects within Nagios.
 8. Restart the Nagios process.  
 `systemctl restart nagios`
+
