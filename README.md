@@ -26,7 +26,7 @@ EXAMPLE:
 2. Copy the two shell scripts (`slack_service_notify.sh` and `slack_host_notify.sh`) onto your Nagios instance. In this example I put them in `/nagios/libexec/`.
 3. Make the two shell scripts executable with `chmod +x slack_service_notify.sh` and `chmod +x slack_host_notify.sh`
 4. Open each file in your preferred text editor and edit the `SLACK_URL` variable to your Slack webhook URL you received in step 1.
-5. Make a two new Nagios commands in a .cfg file. I used `/nagios/etc/objects/commands.cfg`. Make sure you update the `command_line` with the correct location of the script if you did not place the script in `/usr/local/nagios/libexec/`.
+5. Make two new Nagios commands in a .cfg file. I used `/nagios/etc/objects/commands.cfg`. Make sure you update the `command_line` with the correct location of the script if you did not place the script in `/usr/local/nagios/libexec/`.
 ```
 define command {
       command_name notify-service-by-slack
