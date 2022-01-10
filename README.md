@@ -35,7 +35,6 @@ define command {
 define command {
       command_name notify-host-by-slack
       command_line /usr/local/nagios/libexec/slack_host_notify.sh "$NOTIFICATIONTYPE$" "$HOSTNAME$" $HOSTADDRESS$ "$HOSTSTATE$" "$HOSTOUTPUT$" "$LONGDATETIME$" "$HOSTACKCOMMENT$" "$HOSTACKAUTHOR$" "$HOSTINFOURL$"
-}
 }```
 6. Create a new contact object to use the new Slack notification commands. I use `/nagios/etc/objects/contacts.cfg`.
 ```
