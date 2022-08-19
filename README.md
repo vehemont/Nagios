@@ -13,7 +13,32 @@ EXAMPLE:
     `./check_ubiquiti_switch.sh -h 192.168.1.5 -c public -v 1 -i 0/14`
     OK - Port 0/14 is UP - 14 <Port Description>
     (2815900) 7:49:19.00
+  
+  
+`check_aruba_cx6100.py` - Pulls interface, PSU, and fan status using the Aruba REST API on the switch.
 
+EXAMPLE:
+
+
+    check_aruba_cx6100.py -H 192.168.1.1 -v v10.09 -u admin -p test123 interface -n 1/1/1 -s
+    check_aruba_cx6100.py -H switch.company.com -v10.04 -u admin -p test123 system fan
+    check_aruba_cx6100.py -H switch.company.com -v10.04 -u admin -p test123 system psu
+usage: check_aruba_cx6100.py [-h] -H HOST -v VERSION -u USERNAME -p PASSWORD {interface,system} ...
+
+positional arguments:
+  {interface,system}    Define RESTful endpoint to query a system part or interface
+
+options:
+  -h, --help            show this help message and exit
+  -H HOST, --host HOST  Define hostname or IP of Aruba switch - Example: switch.company.com or 192.168.1.2
+  -v VERSION, --version VERSION
+                        API version to access on the Aruba switch - Example: v10.09 or v10.04
+  -u USERNAME, --username USERNAME
+                        Define username to login to Aruba switch
+  -p PASSWORD, --password PASSWORD
+                        Define password to login to Aruba switch
+
+Troubleshooting: 400 error - Bad syntax | 401 - Wrong creds / Unauthorized
 
 ## Slack notifications
 
