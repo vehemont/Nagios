@@ -23,22 +23,22 @@ EXAMPLE:
     check_aruba_cx6100.py -H 192.168.1.1 -v v10.09 -u admin -p test123 interface -n 1/1/1 -s
     check_aruba_cx6100.py -H switch.company.com -v10.04 -u admin -p test123 system fan
     check_aruba_cx6100.py -H switch.company.com -v10.04 -u admin -p test123 system psu
-usage: check_aruba_cx6100.py [-h] -H HOST -v VERSION -u USERNAME -p PASSWORD {interface,system} ...
+    usage: check_aruba_cx6100.py [-h] -H HOST -v VERSION -u USERNAME -p PASSWORD {interface,system} ...
 
-positional arguments:
-  {interface,system}    Define RESTful endpoint to query a system part or interface
+    positional arguments:
+      {interface,system}    Define RESTful endpoint to query a system part or interface
 
-options:
-  -h, --help            show this help message and exit
-  -H HOST, --host HOST  Define hostname or IP of Aruba switch - Example: switch.company.com or 192.168.1.2
-  -v VERSION, --version VERSION
-                        API version to access on the Aruba switch - Example: v10.09 or v10.04
-  -u USERNAME, --username USERNAME
-                        Define username to login to Aruba switch
-  -p PASSWORD, --password PASSWORD
-                        Define password to login to Aruba switch
+    options:
+      -h, --help            show this help message and exit
+      -H HOST, --host HOST  Define hostname or IP of Aruba switch - Example: switch.company.com or 192.168.1.2
+      -v VERSION, --version VERSION
+                            API version to access on the Aruba switch - Example: v10.09 or v10.04
+      -u USERNAME, --username USERNAME
+                            Define username to login to Aruba switch
+      -p PASSWORD, --password PASSWORD
+                            Define password to login to Aruba switch
 
-Troubleshooting: 400 error - Bad syntax | 401 - Wrong creds / Unauthorized
+    Troubleshooting: 400 error - Bad syntax | 401 - Wrong creds / Unauthorized
 
 ## Slack notifications
 
